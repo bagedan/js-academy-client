@@ -1,12 +1,65 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TITLE</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="font/Bellefair-Regular.ttf" rel="stylesheet">
 </head>
 <body>
-<h1>React Hello! Changed</h1>
+<div class="container-fluid">
+    <div id="title" class="jumbotron">
+        <h1>Photo Gallery</h1>
+    </div>
 
-<div id="root"></div>
+    <div id="photoList" class="row">
+        <div id="firstPhoto" class="photo col-xs-8 col-xs-offset-2">
+            <picture>
+                <source media="(min-width: 1100px)" srcset="http://via.placeholder.com/700x300">
+                <source media="(min-width: 700px)" srcset="http://via.placeholder.com/525x225">
+                <source media="(min-width: 480px)" srcset="http://via.placeholder.com/350x150">
+                <img class="img-thumbnail" src="http://via.placeholder.com/350x150" alt="image">
+            </picture>
+            <div class="description-with-likes row">
+                <div class="caption col-xs-10">
+                    <p>The first picture that was taken on the day before the day this picture was taken</p>
+                </div>
+                <span class="badge col-xs-1"> Likes 1</span>
+            </div>
 
-<script src="dist/app-bundle.js"></script>
+
+
+        </div>
+        <div id="secondPhoto" class="photo col-xs-8 col-xs-offset-2">
+            <picture>
+                <source media="(min-width: 1100px)" srcset="http://via.placeholder.com/700x300">
+                <source media="(min-width: 700px)" srcset="http://via.placeholder.com/525x225">
+                <source media="(min-width: 480px)" srcset="http://via.placeholder.com/350x150">
+                <img class="img-thumbnail" src="http://via.placeholder.com/350x150" alt="image">
+            </picture>
+            <div class="description">Image 350x150</div>
+            <div class="likes">
+                <span class="badge"> Likes 2</span>
+            </div>
+        </div>
+        <div id="thirdPhoto" class="photo col-xs-8 col-xs-offset-2">
+            <picture>
+                <source media="(min-width: 1100px)" srcset="http://via.placeholder.com/700x300">
+                <source media="(min-width: 700px)" srcset="http://via.placeholder.com/525x225">
+                <source media="(min-width: 480px)" srcset="http://via.placeholder.com/350x150">
+                <img class="img-thumbnail" src="http://via.placeholder.com/350x150" alt="image">
+            </picture>
+            <div class="description">Image 350x150</div>
+            <div class="likes">
+                <span class="badge"> Likes 3</span>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
