@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import PhotoList from './components/photo-list';
+import Container from './components/container';
 
-ReactDOM.render(<PhotoList />,
-    document.getElementById('photoList'));
+ReactDOM.render(<Container />,
+    document.getElementById('root'));

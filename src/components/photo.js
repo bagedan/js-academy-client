@@ -1,25 +1,25 @@
 import React from 'react';
 
-const Photo = (props) => {
+const Photo = (photo) => {
     return (
-        <div id="{ photo.description }" class="photo col-md-12">
-            <div class="row pic-zone">
-                <div class="col-md-12">
-                    <picture class="">
-                        <source media="(min-width: 1100px)" srcset="http://via.placeholder.com/700x300"/>
-                        <source media="(min-width: 700px)" srcset="http://via.placeholder.com/525x225"/>
-                        <source media="(min-width: 480px)" srcset="http://via.placeholder.com/350x150"/>
-                        <img class="img-thumbnail" src="http://via.placeholder.com/350x150" alt="image"/>
+        <div id={ photo.key } className="photo col-md-12">
+            <div className="row pic-zone">
+                <div className="col-md-12">
+                    <picture>
+                        <source media="(min-width: 1100px)" srcSet={photo.bigImageUrl} />
+                        <source media="(min-width: 700px)" srcSet={photo.mediumImageUrl}/>
+                        <source media="(min-width: 480px)" srcSet={photo.smallImageUrl}/>
+                        <img className="img-thumbnail" src={photo.mediumImageUrl} alt="image"/>
                     </picture>
-                    <span class="button-on-picture">
-                        <i class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></i>5
+                    <span className="button-on-picture">
+                        <i className="glyphicon glyphicon-thumbs-up" aria-hidden="true"></i>{photo.likesCount}
                     </span>
                 </div>
             </div>
 
-            <div class="description-with-likes row">
-                <div class="caption col-md-12 description">
-                    <p>The first picture that was taken on the day before the day this picture was taken</p>
+            <div className="description-with-likes row">
+                <div className="caption col-md-12 description">
+                    <p>{photo.description}</p>
                 </div>
             </div>
         </div>
