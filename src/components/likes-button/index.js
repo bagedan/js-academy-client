@@ -14,10 +14,22 @@ class LikesCounter extends Component {
         style: 'on-picture'
     };
 
+    constructor(props) {
+        super(props);
+        this.state = {likesCount: 0};
+    }
+
+    increaseCounter = () => {
+        this.setState(prevState => ({
+                likesCount: prevState.likesCount + 1
+            })
+        );
+    };
+
     render() {
         return (
-            <span className={styles[`button-${this.props.style}`]}>
-                <i className="glyphicon glyphicon-thumbs-up" aria-hidden="true"></i>{this.props.likesCount}
+            <span className={styles[`button-${this.props.style}`]} onClick={this.increaseCounter}>
+                <i className="glyphicon glyphicon-thumbs-up" aria-hidden="true"></i>{this.state.likesCount}
             </span>
         )
     }
