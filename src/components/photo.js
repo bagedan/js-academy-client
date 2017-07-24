@@ -1,8 +1,9 @@
 import React from 'react';
+import LikesButton from './likes-button'
 
 const Photo = (photo) => {
     return (
-        <div id={ photo.key } className="photo col-md-12">
+        <div id={ photo.id } className="photo col-md-12">
             <div className="row pic-zone">
                 <div className="col-md-12">
                     <picture>
@@ -11,9 +12,7 @@ const Photo = (photo) => {
                         <source media="(min-width: 480px)" srcSet={photo.smallImageUrl}/>
                         <img className="img-thumbnail" src={photo.mediumImageUrl} alt="image"/>
                     </picture>
-                    <span className="button-on-picture">
-                        <i className="glyphicon glyphicon-thumbs-up" aria-hidden="true"></i>{photo.likesCount}
-                    </span>
+                    <LikesButton key={ photo.id + "-like-button"}/>
                 </div>
             </div>
 

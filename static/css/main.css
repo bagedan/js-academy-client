@@ -10,12 +10,6 @@ img {
 .button-zone{
     text-align: right;
 }
-.button-on-picture {
-    position: absolute;
-    left: 100%;
-    margin-left: -50px;
-    bottom: 6px;
-}
 .pic-zone {
     position: relative;
 }
