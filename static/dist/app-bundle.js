@@ -23220,8 +23220,8 @@ exports.default = function () {
     return _react2.default.createElement(
         'div',
         { id: 'photo-container', className: 'container-fluid' },
-        _react2.default.createElement(_header2.default, { key: 'header' }),
-        _react2.default.createElement(_photoList2.default, { key: 'photo-list' })
+        _react2.default.createElement(_header2.default, null),
+        _react2.default.createElement(_photoList2.default, null)
     );
 };
 
@@ -23460,7 +23460,7 @@ module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
                         alt: 'image'
                     })
                 ),
-                        _react2.default.createElement(_likesButton2.default, {key: photo.id + "-like-button"})
+                        _react2.default.createElement(_likesButton2.default, null)
                     )
                 ),
                 _react2.default.createElement(

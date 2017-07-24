@@ -12,7 +12,7 @@ const Photo = (photo) => {
                         <source media="(min-width: 480px)" srcSet={photo.smallImageUrl}/>
                         <img className="img-thumbnail" src={photo.mediumImageUrl} alt="image"/>
                     </picture>
-                    <LikesButton key={ photo.id + "-like-button"}/>
+                    <LikesButton/>
                 </div>
             </div>
 
