@@ -1,5 +1,5 @@
 import React from 'react';
-import LikesButton from './likes-button'
+import LikesButton from '../likes-button'
 
 const Photo = (photo) => {
     return (
@@ -7,7 +7,7 @@ const Photo = (photo) => {
             <div className="row pic-zone">
                 <div className="col-md-12">
                     <picture>
-                        <source media="(min-width: 1100px)" srcSet={photo.bigImageUrl} />
+                        <source media="(min-width: 1100px)" srcSet={photo.bigImageUrl}/>
                         <source media="(min-width: 700px)" srcSet={photo.mediumImageUrl}/>
                         <source media="(min-width: 480px)" srcSet={photo.smallImageUrl}/>
                         <img className="img-thumbnail" src={photo.mediumImageUrl} alt="image"/>
@@ -22,7 +22,7 @@ const Photo = (photo) => {
                 </div>
             </div>
         </div>
-        );
+    );
 };
 
 export default Photo;

@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './header';
-import PhotoList from './photo-list';
+import Header from '../header';
+import PhotoList from '../photo-list';
 
 export default () => {
     return (

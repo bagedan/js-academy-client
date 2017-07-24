@@ -1,5 +1,5 @@
 import React from 'react';
-import PhotoHtml from "./photo";
+import PhotoHtml from "../photo";
 
 class Photo {
     constructor(id, description, likesCount, mediumImageUrl, smallImageUrl, bigImageUrl) {
