@@ -8060,7 +8060,7 @@ module.exports = function(isValidElement) {
                                         if (entry) {
                                             if (!isNode(entry[1])) {
                                                 return false;
-                                            }
+                }
                                         }
                                     }
                                 }
@@ -11077,13 +11077,13 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-        var _container = __webpack_require__(227);
+        var _app = __webpack_require__(227);
 
-var _container2 = _interopRequireDefault(_container);
+        var _app2 = _interopRequireDefault(_app);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(_react2.default.createElement(_container2.default, null), document.getElementById('root'));
+        _reactDom2.default.render(_react2.default.createElement(_app2.default, null), document.getElementById('root'));
 
 /***/ }),
     /* 127 */
@@ -23443,29 +23443,23 @@ module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
                     'div',
                     {className: 'row pic-zone'},
                     _react2.default.createElement(
-                        'div',
+                'div',
                         {className: 'col-md-12'},
-                        _react2.default.createElement(
-                            'picture',
-                            null,
-                            _react2.default.createElement('source', {
-                                media: '(min-width: 1100px)',
-                                srcSet: photo.bigImageUrl
-                            }),
-                            _react2.default.createElement('source', {
-                                media: '(min-width: 700px)',
-                                srcSet: photo.mediumImageUrl
-                            }),
-                            _react2.default.createElement('source', {
-                                media: '(min-width: 480px)',
-                                srcSet: photo.smallImageUrl
-                            }),
-                            _react2.default.createElement('img', {
-                                className: 'img-thumbnail',
-                                src: photo.mediumImageUrl,
-                                alt: 'image'
-                            })
-                        ),
+                _react2.default.createElement(
+                    'picture',
+                    null,
+                    _react2.default.createElement('source', {media: '(min-width: 1100px)', srcSet: photo.bigImageUrl}),
+                    _react2.default.createElement('source', {
+                        media: '(min-width: 700px)',
+                        srcSet: photo.mediumImageUrl
+                    }),
+                    _react2.default.createElement('source', {media: '(min-width: 480px)', srcSet: photo.smallImageUrl}),
+                    _react2.default.createElement('img', {
+                        className: 'img-thumbnail',
+                        src: photo.mediumImageUrl,
+                        alt: 'image'
+                    })
+                ),
                         _react2.default.createElement(_likesButton2.default, {key: photo.id + "-like-button"})
                     )
                 ),
@@ -23475,11 +23469,11 @@ module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
                     _react2.default.createElement(
                         'div',
                         {className: 'caption col-md-12 description'},
-                        _react2.default.createElement(
-                            'p',
-                            null,
-                            photo.description
-                        )
+                _react2.default.createElement(
+                    'p',
+                    null,
+                    photo.description
+                )
                     )
                 )
             );
@@ -23535,22 +23529,34 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
         var LikesCounter = function (_Component) {
             (0, _inherits3.default)(LikesCounter, _Component);
 
-            function LikesCounter() {
+            function LikesCounter(props) {
                 (0, _classCallCheck3.default)(this, LikesCounter);
-                return (0, _possibleConstructorReturn3.default)(this, (LikesCounter.__proto__ || (0, _getPrototypeOf2.default)(LikesCounter)).apply(this, arguments));
-    }
+
+                var _this = (0, _possibleConstructorReturn3.default)(this, (LikesCounter.__proto__ || (0, _getPrototypeOf2.default)(LikesCounter)).call(this, props));
+
+                _this.increaseCounter = function () {
+                    _this.setState(function (prevState) {
+                        return {
+                            likesCount: prevState.likesCount + 1
+                        };
+                    });
+        };
+
+                _this.state = {likesCount: 0};
+                return _this;
+            }
 
             (0, _createClass3.default)(LikesCounter, [{
                 key: 'render',
                 value: function render() {
                     return _react2.default.createElement(
                         'span',
-                        {className: _styles2.default['button-' + this.props.style]},
+                        {className: _styles2.default['button-' + this.props.style], onClick: this.increaseCounter},
                         _react2.default.createElement('i', {
                             className: 'glyphicon glyphicon-thumbs-up',
                             'aria-hidden': 'true'
                         }),
-                        this.props.likesCount
+                        this.state.likesCount
                     );
                 }
             }]);
