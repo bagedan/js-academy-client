@@ -10,8 +10,8 @@ describe('LikesCounter', () => {
     });
 
     it('like counter should be asigned by prop', () => {
-        const wrapper = shallow(<LikesCounter likesCount="42"/>);
-        expect(wrapper.state('likesCount')).to.be.equal('42');
+        const wrapper = shallow(<LikesCounter likesCount={42}/>);
+        expect(wrapper.state('likesCount')).to.be.equal(42);
     });
 
     it('increase counter by 1', () => {

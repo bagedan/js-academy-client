@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types'
 import LikesButton from '../likes-button'
-import TrashButton from '../delete-button'
+import DeleteButton from '../delete-button'
 
 class Photo extends Component {
 
@@ -25,7 +25,7 @@ class Photo extends Component {
             <div id={this.props.id} className="photo col-md-12">
                 <div className="row pic-zone">
                     <div className="col-md-12">
-                        <TrashButton onClick={this.trashButtonCallback}/>
+                        <DeleteButton onClick={this.trashButtonCallback}/>
                         <picture>
                             <source media="(min-width: 1100px)" srcSet={this.props.bigImageUrl}/>
                             <source media="(min-width: 700px)" srcSet={this.props.mediumImageUrl}/>
