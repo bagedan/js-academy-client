@@ -14,4 +14,9 @@ describe('PhotoContainer', () => {
             <PhotoList />
         ])).to.equal(true);
     });
+
+    it('should have class container-fluid', () => {
+        const wrapper = shallow(<PhotoContainer/>);
+        expect(wrapper.is('div.container-fluid')).to.be.equal(true);
+    });
 });
