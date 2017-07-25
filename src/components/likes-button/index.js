@@ -16,7 +16,7 @@ class LikesCounter extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {likesCount: 0};
+        this.state = {likesCount: props.likesCount};
     }
 
     increaseCounter = () => {

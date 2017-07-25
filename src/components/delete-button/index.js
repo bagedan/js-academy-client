@@ -18,6 +18,7 @@ class DeleteButton extends Component {
     }
 
     render() {
+        console.log('render method called');
         return (
             <span className={styles[`button-${this.props.style}`]} onClick={this.props.onClick}>
                 <i className="glyphicon glyphicon-trash" aria-hidden="true"></i>

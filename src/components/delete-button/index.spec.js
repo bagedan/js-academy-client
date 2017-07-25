@@ -17,14 +17,4 @@ describe('DeleteButton', () => {
 
         callback.should.have.been.calledWith();
     });
-
-    it('should have class from css file', () => {
-        DeleteButton.styles = {
-            'button-on-picture': 'test-style'
-        }
-        console.log(typeof DeleteButton.styles);
-
-        const wrapper = shallow(<DeleteButton/>);
-        expect(wrapper.find('span').html()).to.equal('');
-    });
 });
