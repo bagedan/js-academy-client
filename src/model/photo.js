@@ -1,42 +1,19 @@
 export default class Photo {
     addLike = () => {
-        if (this._likesCount) {
-            this._likesCount = this._likesCount + 1;
+        if (this.likesCount) {
+            this.likesCount = this.likesCount + 1;
         } else {
-            this._likesCount = 1;
+            this.likesCount = 1;
         }
     }
 
     constructor(id, description, likesCount, mediumImageUrl, smallImageUrl, bigImageUrl) {
-        this._id = id;
-        this._description = description;
-        this._likesCount = likesCount;
-        this._mediumImageUrl = mediumImageUrl;
-        this._smallImageUrl = smallImageUrl;
-        this._bigImageUrl = bigImageUrl;
+        this.id = id;
+        this.description = description;
+        this.likesCount = likesCount;
+        this.mediumImageUrl = mediumImageUrl;
+        this.smallImageUrl = smallImageUrl;
+        this.bigImageUrl = bigImageUrl;
     }
 
-    get id() {
-        return this._id;
-    }
-
-    get description() {
-        return this._description;
-    }
-
-    get mediumImageUrl() {
-        return this._mediumImageUrl;
-    }
-
-    get smallImageUrl() {
-        return this._smallImageUrl;
-    }
-
-    get bigImageUrl() {
-        return this._bigImageUrl;
-    }
-
-    get likesCount() {
-        return this._likesCount;
-    }
 }

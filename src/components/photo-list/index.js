@@ -28,16 +28,9 @@ class PhotoList extends Component {
         const photoElementList = this.state.photos.map((photo) => {
             if (photo instanceof Photo) {
                 console.log(`Generating new Photo component from object [${JSON.stringify(photo)}]`);
-                //TODO so much typing here... why [a,b] = [b,a] kind of thing is not working here?
-                //or can I just pas the photo object?
                 return <PhotoHtml key={photo.id}
-                                  id={photo.id}
-                                  description={photo.description}
-                                  likesCount={photo.likesCount}
-                                  smallImageUrl={photo.smallImageUrl}
-                                  mediumImageUrl={photo.mediumImageUrl}
-                                  bigImageUrl={photo.bigImageUrl}
-                                  deleteImageCallback={this.deleteImageCallback}
+                                  deleteImageCallback = {this.deleteImageCallback}
+                                  {...photo}
                 />
             }
         });
