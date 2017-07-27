@@ -2,8 +2,8 @@ import React from 'react';
 import { expect } from 'chai';
 import { shallow, mount } from 'enzyme';
 import PhotoContainer from './index.js';
-import Header from '../header';
-import PhotoList from '../photo-list';
+import Header from '../Header';
+import PhotoList from '../PhotoList';
 
 
 describe('PhotoContainer', () => {

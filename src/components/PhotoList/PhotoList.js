@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import PhotoHtml from '../photo'
+import PhotoHtml from '../Photo'
 import Photo from '../../model/photo'
 import PhotoService from '../../service/PhotoService'
 

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles.css';
 
-class LikesCounter extends Component {
+class LikeButton extends Component {
 
     static propTypes = {
         likesCount: PropTypes.number,
@@ -35,4 +35,4 @@ class LikesCounter extends Component {
     }
 }
 
-export default LikesCounter;
+export default LikeButton;

@@ -3,7 +3,7 @@ import {expect} from 'chai';
 import {shallow} from 'enzyme';
 import LikesCounter from './index.js';
 
-describe('LikesCounter', () => {
+describe('LikeButton', () => {
     it('like counter should be 0 by default', () => {
         const wrapper = shallow(<LikesCounter/>);
         expect(wrapper.state('likesCount')).to.be.equal(0);
