@@ -6,7 +6,7 @@ class DeleteButton extends Component {
 
     static propTypes = {
         style: PropTypes.string,
-        onClick: PropTypes.func.isRequired
+        onClick: PropTypes.func
     };
 
     static defaultProps = {

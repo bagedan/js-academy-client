@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types'
-import LikesButton from '../likes-button'
-import DeleteButton from '../delete-button'
+import LikeButton from '../LikeButton'
+import DeleteButton from '../DeleteButton'
 
 class Photo extends Component {
 
@@ -11,7 +11,8 @@ class Photo extends Component {
         mediumImageUrl: PropTypes.string.isRequired,
         smallImageUrl: PropTypes.string,
         description: PropTypes.string,
-        deleteImageCallback: PropTypes.func.isRequired
+        deleteImageCallback: PropTypes.func.isRequired,
+        initialLikesCount: PropTypes.number
     };
 
     trashButtonCallback = () => {
@@ -32,7 +33,7 @@ class Photo extends Component {
                             <source media="(min-width: 480px)" srcSet={this.props.smallImageUrl}/>
                             <img className="img-thumbnail" src={this.props.mediumImageUrl} alt="image"/>
                         </picture>
-                        <LikesButton/>
+                        <LikeButton/>
                     </div>
                 </div>
 

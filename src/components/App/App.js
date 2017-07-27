@@ -1,8 +1,8 @@
 import React, {Component}  from 'react';
-import Header from '../header';
-import PhotoList from '../photo-list';
+import Header from '../Header';
+import PhotoList from '../PhotoList';
 
-class PhotoContainer extends Component {
+class App extends Component {
     render() {
         return (
             <div id="photo-container" className="container-fluid">
@@ -14,4 +14,4 @@ class PhotoContainer extends Component {
 
 }
 
-export default PhotoContainer;
+export default App;
