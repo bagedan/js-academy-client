@@ -1,8 +1,17 @@
-'use strict'
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import { render } from 'react-dom'
+import { Button, Container } from 'semantic-ui-react'
+import AppHeader from './components/Header';
+import AppBody from './components/Body';
 
-import App from './components/App';
+const MOUNT_NODE = document.getElementById('root')
 
-ReactDOM.render(<App />,
-    document.getElementById('root'));
+const App = () => (
+  <Container>
+    <AppHeader/>
+
+    <AppBody />
+  </Container>
+)
+
+render(<App />, MOUNT_NODE)
