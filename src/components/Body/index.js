@@ -4,7 +4,7 @@ import Stage from '../Stage';
 import {getUserLists} from '../../service/UserDao';
 
 
-export default class AppHeader extends Component {
+export default class AppBody extends Component {
 
   constructor(props) {
     super(props);
