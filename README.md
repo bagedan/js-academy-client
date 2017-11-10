@@ -4,8 +4,9 @@ Client side for JS academy project
 
 Requires:
 
-- global installation of mocha: npm install -g mocha
+- npm install -g webpack
+
 
 
 TODO:
-- how to mock import styles from 'some.css'?
+- change background color of entire page (using themes?)
