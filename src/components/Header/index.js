@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Header, Label, Icon, Grid, Button} from 'semantic-ui-react'
+import UserAvatar from './UserAvatar';
 
 export default class AppHeader extends Component {
 
@@ -14,14 +15,10 @@ export default class AppHeader extends Component {
             <Button content='blah-blah'/>
           </Grid.Column>
           <Grid.Column>
-            <Label circular={true}>
-               userA
-            </Label>
+            <UserAvatar/>
           </Grid.Column>
           <Grid.Column>
-            <Label circular={true}>
-              userB
-            </Label>
+            <UserAvatar/>
           </Grid.Column>
           <Grid.Column>
             <Label circular={true}>
