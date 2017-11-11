@@ -1,0 +1,5 @@
+@primaryColor:  #FF0000;
+
+.something: {
+ color: red;
+}
