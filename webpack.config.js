@@ -1,43 +1,72 @@
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack');
+const RewriteImportPlugin = require("less-plugin-rewrite-import");
+const ROOT_DIR = path.resolve(__dirname);
+const SRC_DIR = path.resolve(__dirname, 'app');
+const BUILD_DIR = path.resolve(__dirname, 'build');
+const NODE_MODULES_DIR = path.resolve(__dirname, 'node_modules');
 
-module.exports = {
+var webpackConfig = {
+  devtool: 'eval',
   entry: './src/main.js',
   output: {
     path: path.resolve('static/dist'),
     filename: 'app-bundle.js'
   },
   resolve: {
-    alias: {
-      '../../theme.config$': path.join(__dirname, 'my-theme/theme.config')
-    }
+    modules: [ROOT_DIR, 'node_modules'],
   },
   module: {
     rules: [
       {
-        use: ExtractTextPlugin.extract({
-          use: ['css-loader', 'less-loader']
-        }),
-        test: /\.less$/
+        test: /\.(less|config)/,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'less-loader',
+            options: {
+              paths: [ROOT_DIR, NODE_MODULES_DIR],
+              plugins: [
+                new RewriteImportPlugin({
+                  paths: {
+                    '../../theme.config':  __dirname + '/my-theme/theme.config',
+                  },
+                }),
+              ],
+            },
+          },
+        ],
       },
       {
-        test: /\.jpe?g$|\.gif$|\.png$|\.ttf$|\.eot$|\.svg$/,
-        use: 'file-loader?name=[name].[ext]?[hash]'
+        test: /\.(png|jpg|gif|woff|svg|eot|ttf|woff2)$/,
+        use: [
+          { loader: 'file-loader' },
+        ],
       },
       {
-        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'url-loader?limit=10000&mimetype=application/fontwoff'
+        test: /\.html$/,
+        loader: 'html-loader',
       },
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
-        exclude: /node_modules/
-      }
-    ]
+        query: {presets: ['env']}
+      },
+    ],
   },
-  plugins: [
-    new ExtractTextPlugin({
-      filename: '[name].[contenthash].css',
-    })
-  ]
+
+  // plugins: [
+  //   new HtmlWebpackPlugin({
+  //     inject: 'body',
+  //     template: 'app/index.html',
+  //     filename: 'index.html',
+  //     chunks: ['index'],
+  //     chunksSortMode: 'dependency',
+  //     env: process.env,
+  //   }),
+  // ],
 };
+
+module.exports = webpackConfig;

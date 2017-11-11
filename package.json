@@ -23,6 +23,10 @@
     "semantic-ui-less": "^2.2.12"
   },
   "devDependencies": {
+    "babel-polyfill": "^6.16.0",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.24.1",
+    "less-plugin-rewrite-import": "^0.1.1",
     "babel-cli": "6.24.1",
     "babel-core": "6.25.0",
     "babel-loader": "7.1.1",

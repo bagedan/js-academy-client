@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header, Label, Icon, Grid } from 'semantic-ui-react'
+import { Header, Label, Icon, Grid, Button} from 'semantic-ui-react'
 
 export default class AppHeader extends Component {
 
@@ -11,6 +11,7 @@ export default class AppHeader extends Component {
             <Header>
               JSA-Design
             </Header>
+            <Button content='blah-blah'/>
           </Grid.Column>
           <Grid.Column>
             <Label circular={true}>

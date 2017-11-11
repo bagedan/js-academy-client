@@ -1,6 +1,1 @@
-@backgroundColor: #FF0000;
-
-@primaryColor:  #FF0000;
-@secondaryColor: #1C9BD5;
-
-@fontWeight: normal;
+@backgroundColor: yellow;
