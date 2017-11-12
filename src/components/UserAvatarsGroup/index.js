@@ -5,6 +5,7 @@ import styles from './user-avatars-group.css';
 export default class UserAvatarsGroup extends Component {
 
   render() {
+    console.log('styles for avatar group: ', styles);
     const userAvatars = this.props.userAvatars;
     const userAvatarsImages = userAvatars.map(avatar => {
       return <div className={styles['avatar-div']}>
@@ -19,7 +20,7 @@ export default class UserAvatarsGroup extends Component {
 
     return <div>
       {userAvatarsImages}
-      <Label circular={true} className={styles['add-user-button']}>
+      <Label circular={true} id={styles['add-user-button']}>
         +
       </Label>
     </div>

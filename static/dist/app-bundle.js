@@ -62024,6 +62024,7 @@ var UserAvatarsGroup = function (_Component) {
   (0, _createClass3.default)(UserAvatarsGroup, [{
     key: 'render',
     value: function render() {
+      console.log('styles for avatar group: ', _userAvatarsGroup2.default);
       var userAvatars = this.props.userAvatars;
       var userAvatarsImages = userAvatars.map(function (avatar) {
         return _react2.default.createElement(
@@ -62044,7 +62045,7 @@ var UserAvatarsGroup = function (_Component) {
         userAvatarsImages,
         _react2.default.createElement(
           _semanticUiReact.Label,
-          { circular: true, className: _userAvatarsGroup2.default['add-user-button'] },
+          { circular: true, id: _userAvatarsGroup2.default['add-user-button'] },
           '+'
         )
       );
@@ -62095,7 +62096,7 @@ exports = module.exports = __webpack_require__(150)(undefined);
 
 
 // module
-exports.push([module.i, ".user-avatars-group__add-user-button___1S-cH {\r\n    border-style: dashed;\r\n    border-width: 0.5px;\r\n    border-color: black;\r\n}\r\n\r\n.user-avatars-group__avatar-div___352Ye {\r\n    display: inline-block\r\n}\r\n\r\n.user-avatars-group__star-on-top___1d3A- {\r\n    position: absolute;\r\n    left: 100%;\r\n    margin-left: -50px;\r\n    top: 0;\r\n    color: gold;\r\n}", ""]);
+exports.push([module.i, "#user-avatars-group__add-user-button___1S-cH {\r\n    border-style: dashed;\r\n    border-width: 0.5px;\r\n    border-color: black;\r\n}\r\n\r\n.user-avatars-group__avatar-div___352Ye {\r\n    display: inline-block;\r\n    position: relative;\r\n}\r\n\r\n.user-avatars-group__star-on-top___1d3A- {\r\n    position: absolute;\r\n    left: 100%;\r\n    margin-left: -13px;\r\n    top: -7px;\r\n    color: gold;\r\n    font-size: 0.7em;\r\n}\r\n\r\n", ""]);
 
 // exports
 exports.locals = {
