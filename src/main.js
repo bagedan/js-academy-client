@@ -5,14 +5,14 @@ import AppHeader from './components/Header';
 import AppBody from './components/Body';
 import "semantic-ui-less/semantic.less";
 
-const MOUNT_NODE = document.getElementById('root')
+const MOUNT_NODE = document.getElementById('root');
 
 const App = () => (
   <Container>
     <AppHeader/>
 
-    <AppBody />
+    {/*<AppBody />*/}
   </Container>
-)
+);
 
-render(<App />, MOUNT_NODE)
+render(<App />, MOUNT_NODE);

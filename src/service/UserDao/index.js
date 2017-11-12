@@ -61,3 +61,20 @@ export function getUserLists() {
     }
   ]
 }
+
+export function getUserAvatars(){
+  return [
+    {
+      name: 'Elliot',
+      avatarUrl: '/homework/js-academy-client/static/assets/images/elliot.jpg'
+    },
+    {
+      name: 'Joe',
+      avatarUrl: '/homework/js-academy-client/static/assets/images/Joe.jpg'
+    },
+    {
+      name: 'Stevie',
+      avatarUrl: '/homework/js-academy-client/static/assets/images/stevie.jpg'
+    }
+  ]
+}

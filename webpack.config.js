@@ -7,7 +7,7 @@ const BUILD_DIR = path.resolve(__dirname, 'build');
 const NODE_MODULES_DIR = path.resolve(__dirname, 'node_modules');
 
 var webpackConfig = {
-  devtool: 'eval',
+  devtool: 'none',
   entry: './src/main.js',
   output: {
     path: path.resolve('static/dist'),
@@ -51,10 +51,24 @@ var webpackConfig = {
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader',
-        query: {presets: ['env']}
+        loader:'babel-loader',
+        options: {presets: ['env']}
       },
-    ],
+      {
+        test: /\.css$/,
+        loader: 'style-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.css$/,
+        loader: 'css-loader',
+        options: {
+          modules: true,
+          localIdentName: '[name]__[local]___[hash:base64:5]'
+        },
+        exclude: /node_modules/
+      }
+    ]
   },
 
   // plugins: [
