@@ -3,3 +3,15 @@
     border-width: 0.5px;
     border-color: black;
 }
+
+.avatar-div {
+    display: inline-block
+}
+
+.star-on-top {
+    position: absolute;
+    left: 100%;
+    margin-left: -50px;
+    top: 0;
+    color: gold;
+}

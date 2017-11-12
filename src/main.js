@@ -4,6 +4,7 @@ import { Button, Container } from 'semantic-ui-react'
 import AppHeader from './components/Header';
 import AppBody from './components/Body';
 import "semantic-ui-less/semantic.less";
+import styles from './main.css';
 
 const MOUNT_NODE = document.getElementById('root');
 

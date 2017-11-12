@@ -66,7 +66,8 @@ export function getUserAvatars(){
   return [
     {
       name: 'Elliot',
-      avatarUrl: '/homework/js-academy-client/static/assets/images/elliot.jpg'
+      avatarUrl: '/homework/js-academy-client/static/assets/images/elliot.jpg',
+      markWithStar: true
     },
     {
       name: 'Joe',
