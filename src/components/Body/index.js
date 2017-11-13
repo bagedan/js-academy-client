@@ -21,7 +21,7 @@ export default class AppBody extends Component {
         <Grid.Row>
           {
             this.state.lists.map(list =>
-                <Grid.Column width={4}>
+                <Grid.Column width={4}  key={list.title}>
                   <Stage title={list.title} items={list.items}/>
                 </Grid.Column>
            )

@@ -1,0 +1,23 @@
+.stage {
+    border-radius: 0 !important;
+}
+.edit-header-button {
+    float: left;
+    font-size: 0.8em !important;
+    margin-left: 1em !important;
+}
+
+.title {
+}
+
+.content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.counter {
+    float: right;
+    color: #92bced;
+    font-size: 0.7em;
+    margin-right: 1em;
+}

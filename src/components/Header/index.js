@@ -22,9 +22,7 @@ export default class AppHeader extends Component {
           </Grid.Column>
 
           <Grid.Column floated='right' width={4}>
-            <Label>
               <Icon name='attach'/> 120 files attached
-            </Label>
           </Grid.Column>
         </Grid.Row>
       </Grid>

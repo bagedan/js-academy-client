@@ -12,7 +12,7 @@ const App = () => (
   <Container>
     <AppHeader/>
 
-    {/*<AppBody />*/}
+    <AppBody />
   </Container>
 );
 

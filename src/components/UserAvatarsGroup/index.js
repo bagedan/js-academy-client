@@ -5,10 +5,9 @@ import styles from './user-avatars-group.css';
 export default class UserAvatarsGroup extends Component {
 
   render() {
-    console.log('styles for avatar group: ', styles);
     const userAvatars = this.props.userAvatars;
     const userAvatarsImages = userAvatars.map(avatar => {
-      return <div className={styles['avatar-div']}>
+      return <div className={styles['avatar-div']} key={avatar.id}>
         <Image avatar src={avatar.avatarUrl}/>
         {avatar.markWithStar &&
           <span className={styles['star-on-top']}>

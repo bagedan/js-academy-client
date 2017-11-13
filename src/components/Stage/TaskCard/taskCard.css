@@ -1,0 +1,25 @@
+.content {
+    background-color: #f8fafb !important;
+    border-radius: 0 !important;
+    border-left: solid 0.2em !important;
+}
+
+.red {
+    border-left-color: red !important;
+}
+
+.orange {
+    border-left-color: orange !important;
+}
+
+.green {
+    border-left-color: green !important;
+}
+
+.blue {
+    border-left-color: blue !important;
+}
+
+.violet {
+    border-left-color: #eb5fed !important;
+}
