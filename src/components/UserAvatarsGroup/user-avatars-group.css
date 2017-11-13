@@ -1,7 +1,10 @@
 #add-user-button {
-    border-style: dashed;
-    border-width: 0.5px;
-    border-color: black;
+    border: dashed 0.5px black;
+    vertical-align: middle;
+}
+
+.avatars-group {
+    display: inline-block;
 }
 
 .avatar-div {
@@ -13,7 +16,7 @@
     position: absolute;
     left: 100%;
     margin-left: -13px;
-    top: -7px;
+    top: -5px;
     color: gold;
     font-size: 0.7em;
 }

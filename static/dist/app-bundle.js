@@ -61953,31 +61953,23 @@ var AppHeader = function (_Component) {
       var userAvatars = (0, _UserDao.getUserAvatars)();
 
       return _react2.default.createElement(
-        _semanticUiReact.Grid,
+        _semanticUiReact.Container,
         null,
         _react2.default.createElement(
-          _semanticUiReact.Grid.Row,
-          null,
-          _react2.default.createElement(
-            _semanticUiReact.Grid.Column,
-            { width: 3 },
-            _react2.default.createElement(
-              _semanticUiReact.Header,
-              { className: _header2.default['my-header'] },
-              'JSA-Design'
-            )
-          ),
-          _react2.default.createElement(
-            _semanticUiReact.Grid.Column,
-            { width: 9 },
-            _react2.default.createElement(_UserAvatarsGroup2.default, { userAvatars: userAvatars })
-          ),
-          _react2.default.createElement(
-            _semanticUiReact.Grid.Column,
-            { floated: 'right', width: 4 },
-            _react2.default.createElement(_semanticUiReact.Icon, { name: 'attach' }),
-            ' 120 files attached'
-          )
+          _semanticUiReact.Header,
+          { className: _header2.default['my-header'] },
+          'JSA-Design'
+        ),
+        _react2.default.createElement(
+          'span',
+          { className: _header2.default['users-group'] },
+          _react2.default.createElement(_UserAvatarsGroup2.default, { userAvatars: userAvatars })
+        ),
+        _react2.default.createElement(
+          'span',
+          { className: _header2.default['attachments'] },
+          _react2.default.createElement(_semanticUiReact.Icon, { name: 'attach' }),
+          ' 120 files attached'
         )
       );
     }
@@ -62057,7 +62049,7 @@ var UserAvatarsGroup = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        null,
+        { className: _userAvatarsGroup2.default['avatars-group'] },
         userAvatarsImages,
         _react2.default.createElement(
           _semanticUiReact.Label,
@@ -62112,11 +62104,12 @@ exports = module.exports = __webpack_require__(78)(undefined);
 
 
 // module
-exports.push([module.i, "#user-avatars-group__add-user-button___1S-cH {\r\n    border-style: dashed;\r\n    border-width: 0.5px;\r\n    border-color: black;\r\n}\r\n\r\n.user-avatars-group__avatar-div___352Ye {\r\n    display: inline-block;\r\n    position: relative;\r\n}\r\n\r\n.user-avatars-group__star-on-top___1d3A- {\r\n    position: absolute;\r\n    left: 100%;\r\n    margin-left: -13px;\r\n    top: -7px;\r\n    color: gold;\r\n    font-size: 0.7em;\r\n}\r\n\r\n", ""]);
+exports.push([module.i, "#user-avatars-group__add-user-button___1S-cH {\r\n    border: dashed 0.5px black;\r\n    vertical-align: middle;\r\n}\r\n\r\n.user-avatars-group__avatars-group___3neVO {\r\n    display: inline-block;\r\n}\r\n\r\n.user-avatars-group__avatar-div___352Ye {\r\n    display: inline-block;\r\n    position: relative;\r\n}\r\n\r\n.user-avatars-group__star-on-top___1d3A- {\r\n    position: absolute;\r\n    left: 100%;\r\n    margin-left: -13px;\r\n    top: -5px;\r\n    color: gold;\r\n    font-size: 0.7em;\r\n}\r\n\r\n", ""]);
 
 // exports
 exports.locals = {
 	"add-user-button": "user-avatars-group__add-user-button___1S-cH",
+	"avatars-group": "user-avatars-group__avatars-group___3neVO",
 	"avatar-div": "user-avatars-group__avatar-div___352Ye",
 	"star-on-top": "user-avatars-group__star-on-top___1d3A-"
 };
@@ -62256,11 +62249,13 @@ exports = module.exports = __webpack_require__(78)(undefined);
 
 
 // module
-exports.push([module.i, ".header__my-header___2qRR2 {\r\n    color: red;\r\n}", ""]);
+exports.push([module.i, ".header__my-header___2qRR2 {\r\n    color: red;\r\n    display: inline-block;\r\n    margin-top: 10px !important;\r\n}\r\n\r\n.header__users-group___1X35L {\r\n    margin-left: 1.1em;\r\n}\r\n\r\n.header__attachments___3COHI {\r\n    margin-top: 10px;\r\n    float: right;\r\n}", ""]);
 
 // exports
 exports.locals = {
-	"my-header": "header__my-header___2qRR2"
+	"my-header": "header__my-header___2qRR2",
+	"users-group": "header__users-group___1X35L",
+	"attachments": "header__attachments___3COHI"
 };
 
 /***/ }),
@@ -62515,7 +62510,7 @@ var TaskCard = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         _semanticUiReact.Card,
-        { className: [_taskCard2.default['content'], _taskCard2.default[this.props.item.color]] },
+        { className: _taskCard2.default['content'] + ' ' + _taskCard2.default[this.props.item.color] },
         _react2.default.createElement(
           _semanticUiReact.Card.Content,
           null,
@@ -62632,7 +62627,7 @@ exports = module.exports = __webpack_require__(78)(undefined);
 
 
 // module
-exports.push([module.i, ".stage__stage___22cMb {\r\n    border-radius: 0 !important;\r\n}\r\n.stage__edit-header-button___1rqKs {\r\n    float: left;\r\n    font-size: 0.8em !important;\r\n    margin-left: 1em !important;\r\n}\r\n\r\n.stage__title___2poV9 {\r\n}\r\n\r\n.stage__content___2JeTJ {\r\n    padding-left: 0 !important;\r\n    padding-right: 0 !important;\r\n}\r\n\r\n.stage__counter___1Zflm {\r\n    float: right;\r\n    color: #92bced;\r\n    font-size: 0.7em;\r\n    margin-right: 1em;\r\n}", ""]);
+exports.push([module.i, ".stage__stage___22cMb {\r\n    border-radius: 0 !important;\r\n}\r\n.stage__edit-header-button___1rqKs {\r\n    float: left;\r\n    font-size: 0.8em !important;\r\n    margin-left: 1em !important;\r\n}\r\n\r\n.stage__title___2poV9 {\r\n}\r\n\r\n.stage__content___2JeTJ {\r\n    padding-left: 0 !important;\r\n    padding-right: 0 !important;\r\n}\r\n\r\n.stage__counter___1Zflm {\r\n    float: right;\r\n    color: #92bced;\r\n    font-size: 0.8em;\r\n    margin-right: 1em;\r\n}", ""]);
 
 // exports
 exports.locals = {

@@ -17,7 +17,7 @@ export default class UserAvatarsGroup extends Component {
       </div>
     });
 
-    return <div>
+    return <div className={styles['avatars-group']}>
       {userAvatarsImages}
       <Label circular={true} id={styles['add-user-button']}>
         +

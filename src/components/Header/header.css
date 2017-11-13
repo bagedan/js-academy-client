@@ -1,3 +1,14 @@
 .my-header {
     color: red;
+    display: inline-block;
+    margin-top: 10px !important;
+}
+
+.users-group {
+    margin-left: 1.1em;
+}
+
+.attachments {
+    margin-top: 10px;
+    float: right;
 }
