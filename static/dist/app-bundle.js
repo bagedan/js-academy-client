@@ -62249,7 +62249,7 @@ exports = module.exports = __webpack_require__(78)(undefined);
 
 
 // module
-exports.push([module.i, ".header__my-header___2qRR2 {\r\n    color: red;\r\n    display: inline-block;\r\n    margin-top: 10px !important;\r\n}\r\n\r\n.header__users-group___1X35L {\r\n    margin-left: 1.1em;\r\n}\r\n\r\n.header__attachments___3COHI {\r\n    margin-top: 10px;\r\n    float: right;\r\n}", ""]);
+exports.push([module.i, ".header__my-header___2qRR2 {\r\n    color: red;\r\n    display: inline-block;\r\n    margin: 10px 0 !important;\r\n}\r\n\r\n.header__users-group___1X35L {\r\n    margin-left: 1.1em;\r\n}\r\n\r\n.header__attachments___3COHI {\r\n    margin-top: 10px;\r\n    float: right;\r\n}", ""]);
 
 // exports
 exports.locals = {
