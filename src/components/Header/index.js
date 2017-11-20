@@ -10,7 +10,7 @@ export default class AppHeader extends Component {
     const userAvatars = getUserAvatars();
 
     return (
-      <nav className={styles.nav}>
+      <header className={styles.header}>
         <Container>
           <Header className={styles.title}>
             JSA-Design
@@ -22,7 +22,7 @@ export default class AppHeader extends Component {
             <Icon name='attach'/> 120 files attached
           </span>
         </Container>
-      </nav>
+      </header>
     )
   }
 

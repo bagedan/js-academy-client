@@ -61953,8 +61953,8 @@ var AppHeader = function (_Component) {
       var userAvatars = (0, _UserDao.getUserAvatars)();
 
       return _react2.default.createElement(
-        'nav',
-        { className: _header2.default.nav },
+        'header',
+        { className: _header2.default.header },
         _react2.default.createElement(
           _semanticUiReact.Container,
           null,
@@ -62253,11 +62253,11 @@ exports = module.exports = __webpack_require__(78)(undefined);
 
 
 // module
-exports.push([module.i, ".header__nav___1vMYG {\r\n    padding: 1em 0 1.5em;\r\n}\r\n\r\n.header__title___1BbLK {\r\n    display: inline-block;\r\n}\r\n\r\n.header__usersGroup___bv8EN {\r\n    margin-left: 1.1em;\r\n}\r\n\r\n.header__attachments___3COHI {\r\n    margin-top: 10px;\r\n    float: right;\r\n}", ""]);
+exports.push([module.i, ".header__header___3OfLz {\r\n    padding: 1em 0 1.5em;\r\n}\r\n\r\n.header__title___1BbLK {\r\n    display: inline-block;\r\n}\r\n\r\n.header__usersGroup___bv8EN {\r\n    margin-left: 1.1em;\r\n}\r\n\r\n.header__attachments___3COHI {\r\n    margin-top: 10px;\r\n    float: right;\r\n}", ""]);
 
 // exports
 exports.locals = {
-	"nav": "header__nav___1vMYG",
+	"header": "header__header___3OfLz",
 	"title": "header__title___1BbLK",
 	"usersGroup": "header__usersGroup___bv8EN",
 	"attachments": "header__attachments___3COHI"
