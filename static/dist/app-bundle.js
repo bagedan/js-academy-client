@@ -62515,7 +62515,7 @@ var TaskCard = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         _semanticUiReact.Card,
-        { className: _taskCard2.default['content'] + ' ' + _taskCard2.default[this.props.item.color] },
+        { classNames: _taskCard2.default['content'] + ' ' + _taskCard2.default[this.props.item.color] },
         _react2.default.createElement(
           _semanticUiReact.Card.Content,
           null,
@@ -62580,7 +62580,7 @@ exports = module.exports = __webpack_require__(78)(undefined);
 
 
 // module
-exports.push([module.i, ".taskCard__content___1UA5Y {\r\n    background-color: #f8fafb !important;\r\n    border-radius: 0 !important;\r\n    border-left: solid 0.2em !important;\r\n}\r\n\r\n.taskCard__red___1NrwW {\r\n    border-left-color: red !important;\r\n}\r\n\r\n.taskCard__orange___3Yy1q {\r\n    border-left-color: orange !important;\r\n}\r\n\r\n.taskCard__green___23-ag {\r\n    border-left-color: green !important;\r\n}\r\n\r\n.taskCard__blue___22eBR {\r\n    border-left-color: blue !important;\r\n}\r\n\r\n.taskCard__violet___nBaGW {\r\n    border-left-color: #eb5fed !important;\r\n}", ""]);
+exports.push([module.i, ".taskCard__content___1UA5Y {\r\n    border-left: solid 0.2em;\r\n}\r\n\r\n.taskCard__red___1NrwW {\r\n    border-left-color: red ;\r\n}\r\n\r\n.taskCard__orange___3Yy1q {\r\n    border-left-color: orange !important;\r\n}\r\n\r\n.taskCard__green___23-ag {\r\n    border-left-color: green !important;\r\n}\r\n\r\n.taskCard__blue___22eBR {\r\n    border-left-color: blue !important;\r\n}\r\n\r\n.taskCard__violet___nBaGW {\r\n    border-left-color: #eb5fed !important;\r\n}", ""]);
 
 // exports
 exports.locals = {
