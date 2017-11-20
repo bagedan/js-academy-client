@@ -10,17 +10,19 @@ export default class AppHeader extends Component {
     const userAvatars = getUserAvatars();
 
     return (
-      <Container>
-        <Header className={styles['my-header']}>
-          JSA-Design
-        </Header>
-        <span className={styles['users-group']}>
-          <UserAvatarsGroup userAvatars={userAvatars}/>
-        </span>
-        <span className={styles['attachments']}>
-          <Icon name='attach'/> 120 files attached
-        </span>
-      </Container>
+      <nav className={styles.nav}>
+        <Container>
+          <Header className={styles.title}>
+            JSA-Design
+          </Header>
+          <span className={styles.usersGroup}>
+            <UserAvatarsGroup userAvatars={userAvatars}/>
+          </span>
+          <span className={styles.attachments}>
+            <Icon name='attach'/> 120 files attached
+          </span>
+        </Container>
+      </nav>
     )
   }
 

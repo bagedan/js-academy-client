@@ -61953,23 +61953,27 @@ var AppHeader = function (_Component) {
       var userAvatars = (0, _UserDao.getUserAvatars)();
 
       return _react2.default.createElement(
-        _semanticUiReact.Container,
-        null,
+        'nav',
+        { className: _header2.default.nav },
         _react2.default.createElement(
-          _semanticUiReact.Header,
-          { className: _header2.default['my-header'] },
-          'JSA-Design'
-        ),
-        _react2.default.createElement(
-          'span',
-          { className: _header2.default['users-group'] },
-          _react2.default.createElement(_UserAvatarsGroup2.default, { userAvatars: userAvatars })
-        ),
-        _react2.default.createElement(
-          'span',
-          { className: _header2.default['attachments'] },
-          _react2.default.createElement(_semanticUiReact.Icon, { name: 'attach' }),
-          ' 120 files attached'
+          _semanticUiReact.Container,
+          null,
+          _react2.default.createElement(
+            _semanticUiReact.Header,
+            { className: _header2.default.title },
+            'JSA-Design'
+          ),
+          _react2.default.createElement(
+            'span',
+            { className: _header2.default.usersGroup },
+            _react2.default.createElement(_UserAvatarsGroup2.default, { userAvatars: userAvatars })
+          ),
+          _react2.default.createElement(
+            'span',
+            { className: _header2.default.attachments },
+            _react2.default.createElement(_semanticUiReact.Icon, { name: 'attach' }),
+            ' 120 files attached'
+          )
         )
       );
     }
@@ -62249,12 +62253,13 @@ exports = module.exports = __webpack_require__(78)(undefined);
 
 
 // module
-exports.push([module.i, ".header__my-header___2qRR2 {\r\n    color: red;\r\n    display: inline-block;\r\n    margin: 10px 0 !important;\r\n}\r\n\r\n.header__users-group___1X35L {\r\n    margin-left: 1.1em;\r\n}\r\n\r\n.header__attachments___3COHI {\r\n    margin-top: 10px;\r\n    float: right;\r\n}", ""]);
+exports.push([module.i, ".header__nav___1vMYG {\r\n    padding: 1em 0 1.5em;\r\n}\r\n\r\n.header__title___1BbLK {\r\n    display: inline-block;\r\n}\r\n\r\n.header__usersGroup___bv8EN {\r\n    margin-left: 1.1em;\r\n}\r\n\r\n.header__attachments___3COHI {\r\n    margin-top: 10px;\r\n    float: right;\r\n}", ""]);
 
 // exports
 exports.locals = {
-	"my-header": "header__my-header___2qRR2",
-	"users-group": "header__users-group___1X35L",
+	"nav": "header__nav___1vMYG",
+	"title": "header__title___1BbLK",
+	"usersGroup": "header__usersGroup___bv8EN",
 	"attachments": "header__attachments___3COHI"
 };
 

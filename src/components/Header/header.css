@@ -1,10 +1,12 @@
-.my-header {
-    color: red;
-    display: inline-block;
-    margin: 10px 0 !important;
+.nav {
+    padding: 1em 0 1.5em;
 }
 
-.users-group {
+.title {
+    display: inline-block;
+}
+
+.usersGroup {
     margin-left: 1.1em;
 }
 
