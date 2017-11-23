@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import { Header, Label, Icon, Grid, Button, Container } from 'semantic-ui-react'
 import UserAvatarsGroup from '../UserAvatarsGroup';
 import styles from './header.css';
-import { getUserAvatars } from '../../service/UserDao';
 
 export default class AppHeader extends Component {
 
   render() {
-    const userAvatars = getUserAvatars();
+    const userAvatars = this.props.userAvatars;
 
     return (
       <header className={styles.header}>

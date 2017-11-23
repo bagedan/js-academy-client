@@ -1,5 +1,5 @@
 export function getUserLists() {
-  console.log('getting user lists data');
+  console.log('getting user userLists data');
   return [
     {
       title: 'Backlog',

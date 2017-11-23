@@ -1,9 +1,11 @@
 .content {
-    border-left: solid 0.2em;
+    background-color: #f8fafb !important;
+    border-radius: 0 !important;
+    border-left: 0.2em solid !important;
 }
 
 .red {
-    border-left-color: red ;
+    border-left-color: red !important;
 }
 
 .orange {

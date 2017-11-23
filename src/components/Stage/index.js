@@ -13,14 +13,14 @@ export default class Stage extends Component {
         <span className={styles['counter']} >{this.props.items.length}</span>
       </Card.Header>;
 
-    if (this.props.items.length > 0) {
+    if (this.props.items.size > 0) {
       return (
         <Card className={styles['stage']}>
           <Card.Content className={styles['content']}>
             {cardHeader}
             {
               this.props.items.map(item => {
-                return <TaskCard item={item} key={item.id}/>
+                return <TaskCard item={item} key={item.get('id')}/>
               })
             }
           </Card.Content>
